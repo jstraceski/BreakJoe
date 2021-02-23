@@ -1,0 +1,6 @@
+score
+lives
+You Win!
+You Lose!
+Next Level
+level

@@ -1,0 +1,5 @@
+<map id="ResourceManager" name="ResourceManager">
+<area shape="rect" id="node1" title="Singleton to represent all game data." alt="" coords="5,228,144,255"/>
+<area shape="rect" id="node2" href="$structEntity.html" title="Structure to store entity data." alt="" coords="137,124,197,151"/>
+<area shape="rect" id="node3" href="$structVector3D.html" title="mathematical 3D vector structure Vector3D performs vector operations with 3&#45;dimensions The purpose of..." alt="" coords="11,5,93,32"/>
+</map>

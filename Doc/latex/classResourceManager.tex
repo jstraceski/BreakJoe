@@ -1,0 +1,462 @@
+\hypertarget{classResourceManager}{}\doxysection{Resource\+Manager Class Reference}
+\label{classResourceManager}\index{ResourceManager@{ResourceManager}}
+
+
+Singleton to represent all game data.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Resource\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classResourceManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structClip}{Clip}} $\ast$ \mbox{\hyperlink{classResourceManager_a68bcbc72416c88744c07679b94324fc1}{load\+Sound}} (const char $\ast$path, const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Load a sound file from a path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_a5c6b248bf94bba5e12aa36ea3331cfde}{play\+Sound}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Queue the sound clip to play. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classResourceManager_aab02f37fc14ecbb3410ed5b61094d39c}{load\+Font}} (F\+T\+\_\+\+Library ft, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load font graphics from path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_a954df3370a200d5f4fb62c5654ea8656}{load\+Language}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Load language strings from a text file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classResourceManager_a444f1a1a5c577e436395b3cf78215b55}{get\+Text}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Obtain display text from a key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_abaee38983fe686be1b7f86b8a035f007}{update\+Key}} (S\+D\+L\+\_\+\+Keycode key, bool state)
+\begin{DoxyCompactList}\small\item\em Update and store key state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classResourceManager_af112e91fe6ad61f9c630bf054299cf52}{get\+Key}} (S\+D\+L\+\_\+\+Keycode key)
+\begin{DoxyCompactList}\small\item\em Get the state of a key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classResourceManager_a368935ac3bffd7c5679143c20818ec42}\label{classResourceManager_a368935ac3bffd7c5679143c20818ec42}} 
+void \mbox{\hyperlink{classResourceManager_a368935ac3bffd7c5679143c20818ec42}{clear\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Clear all bricks from the entity vector, leaves players and balls. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_a1ccb0e8b0d4bd728b9147360b021ea0d}{load\+Level}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Load level data from a file path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_a249780279de068f3b1e200bfd5b7e016}{level\+Update}} (bool win)
+\begin{DoxyCompactList}\small\item\em Update the current level state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_a8cb57f54e8e2084d5a193fb81991b967}{menu\+Increment}} (int i)
+\begin{DoxyCompactList}\small\item\em Increment a menu selection index by i. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_aaf6abbe90cefbfc90769c21764e0ebc8}{menu\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Function called when enter is pressed and a menu is open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classResourceManager_a4ee5404a382fad02911e622a26bae0b3}{draw\+Text}} (const std\+::string \&text, const \mbox{\hyperlink{structVector3D}{Vector3D}} \&pos, float scale, int alignment)
+\begin{DoxyCompactList}\small\item\em Draw text to the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classResourceManager_a53bf358b029e050a285725bc70a8550a}{start\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Setup default value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classResourceManager_ab8d9779f5f957610d272525cc32a775e}{shut\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Dereference all pointers and clean up data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classResourceManager}{Resource\+Manager}} $\ast$ \mbox{\hyperlink{classResourceManager_a41943f7fb045ad54f1e24da7c6046502}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Obtain the static instance. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classResourceManager_a95789b498166372b5727aa8706eae56a}{draw\+Entity}} (const \mbox{\hyperlink{structEntity}{Entity}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Draw entity to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structEntity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{classResourceManager_a378597dd84092629074efd1eacce2e7e}{entities}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classResourceManager_aa5ab59252e666b995787a8e6eddc4e98}{menu\+Options}}
+\item 
+int \mbox{\hyperlink{classResourceManager_afdba6262e0d0922a714e7d3b022127e7}{menu\+Index}} = 0
+\item 
+\mbox{\hyperlink{structEntity}{Entity}} $\ast$ \mbox{\hyperlink{classResourceManager_a4c935d5250083612ec752f61c9271e1c}{player}}
+\item 
+\mbox{\hyperlink{structEntity}{Entity}} $\ast$ \mbox{\hyperlink{classResourceManager_a4fe69eb88a03e7e4109ffa94458f192d}{ball}}
+\item 
+int \mbox{\hyperlink{classResourceManager_a906b0695beb33e27c47b6def82f8cf4a}{level\+Id}} = 0
+\item 
+int \mbox{\hyperlink{classResourceManager_a47cffc1a8885659ac13d03d17f117bcd}{player\+Lives}} = 3
+\item 
+int \mbox{\hyperlink{classResourceManager_a2c40c87216d2934fe950ff7ae20881ac}{score}} = 0
+\item 
+float \mbox{\hyperlink{classResourceManager_a6dabaa9f71a779a46eeefb94518a6c3b}{pause\+Timer}} = 0
+\item 
+float \mbox{\hyperlink{classResourceManager_a73b464aa18681dffe4f47e43759e4e06}{P\+A\+U\+S\+E\+\_\+\+D\+E\+L\+AY}} = 3
+\item 
+std\+::string \mbox{\hyperlink{classResourceManager_a72ba3fbb53ac6573c893626e32db3f5f}{pause\+Text}} = \char`\"{}\char`\"{}
+\item 
+bool \mbox{\hyperlink{classResourceManager_a5c8474f2abe4e2afc6f4d3e91380b213}{end}} = false
+\item 
+bool \mbox{\hyperlink{classResourceManager_af899c18604ca2c0446a9ee2dccadd235}{menu}} = false
+\item 
+bool \mbox{\hyperlink{classResourceManager_a5f62df86dbf87569639ae22aea4a7241}{ball\+Captured}} = true
+\item 
+\mbox{\hyperlink{structVector3D}{Vector3D}} \mbox{\hyperlink{classResourceManager_ac9182df36b2b63b8647521a2d9d0e89c}{shoot\+Vector}} = \mbox{\hyperlink{structVector3D}{Vector3D}}(0, 2, 0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton to represent all game data. 
+
+Stores Character Textures, Sound Clips, Key-\/\+States, Message Text, Level Lookup. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classResourceManager_a95789b498166372b5727aa8706eae56a}\label{classResourceManager_a95789b498166372b5727aa8706eae56a}} 
+\index{ResourceManager@{ResourceManager}!drawEntity@{drawEntity}}
+\index{drawEntity@{drawEntity}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{drawEntity()}{drawEntity()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::draw\+Entity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structEntity}{Entity}} $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Draw entity to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & entity reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classResourceManager_a4ee5404a382fad02911e622a26bae0b3}\label{classResourceManager_a4ee5404a382fad02911e622a26bae0b3}} 
+\index{ResourceManager@{ResourceManager}!drawText@{drawText}}
+\index{drawText@{drawText}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::draw\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{const \mbox{\hyperlink{structVector3D}{Vector3D}} \&}]{pos,  }\item[{float}]{scale,  }\item[{int}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Draw text to the screen. 
+
+Draws the text at the given position, size scale, and alignment. The alignment is where the text is drawn from.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & render string \\
+\hline
+{\em pos} & text position \\
+\hline
+{\em scale} & text size \\
+\hline
+{\em alignment} & left/center/right -\/$>$ 0/1/2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classResourceManager_a41943f7fb045ad54f1e24da7c6046502}\label{classResourceManager_a41943f7fb045ad54f1e24da7c6046502}} 
+\index{ResourceManager@{ResourceManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classResourceManager}{Resource\+Manager}} $\ast$ Resource\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtain the static instance. 
+
+\begin{DoxyReturn}{Returns}
+static instance of Resource Manager 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResourceManager_af112e91fe6ad61f9c630bf054299cf52}\label{classResourceManager_af112e91fe6ad61f9c630bf054299cf52}} 
+\index{ResourceManager@{ResourceManager}!getKey@{getKey}}
+\index{getKey@{getKey}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily bool Resource\+Manager\+::get\+Key (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Keycode}]{key }\end{DoxyParamCaption})}
+
+
+
+Get the state of a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & keyboard keycode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key is down, false is up 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResourceManager_a444f1a1a5c577e436395b3cf78215b55}\label{classResourceManager_a444f1a1a5c577e436395b3cf78215b55}} 
+\index{ResourceManager@{ResourceManager}!getText@{getText}}
+\index{getText@{getText}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily std\+::string Resource\+Manager\+::get\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Obtain display text from a key. 
+
+This is used so that text can be mapped by a key and loaded by a language file. 
+\begin{DoxyParams}{Parameters}
+{\em key} & reference key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+referenced text 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResourceManager_a249780279de068f3b1e200bfd5b7e016}\label{classResourceManager_a249780279de068f3b1e200bfd5b7e016}} 
+\index{ResourceManager@{ResourceManager}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::level\+Update (\begin{DoxyParamCaption}\item[{bool}]{win }\end{DoxyParamCaption})}
+
+
+
+Update the current level state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & true if the level was won, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classResourceManager_aab02f37fc14ecbb3410ed5b61094d39c}\label{classResourceManager_aab02f37fc14ecbb3410ed5b61094d39c}} 
+\index{ResourceManager@{ResourceManager}!loadFont@{loadFont}}
+\index{loadFont@{loadFont}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{loadFont()}{loadFont()}}
+{\footnotesize\ttfamily int Resource\+Manager\+::load\+Font (\begin{DoxyParamCaption}\item[{F\+T\+\_\+\+Library}]{ft,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load font graphics from path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ft} & Freetype library instance \\
+\hline
+{\em path} & system path to the ttf file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the font fails to load, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResourceManager_a954df3370a200d5f4fb62c5654ea8656}\label{classResourceManager_a954df3370a200d5f4fb62c5654ea8656}} 
+\index{ResourceManager@{ResourceManager}!loadLanguage@{loadLanguage}}
+\index{loadLanguage@{loadLanguage}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{loadLanguage()}{loadLanguage()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::load\+Language (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Load language strings from a text file. 
+
+Strings are separated by newlines and are in order. 
+\begin{DoxyParams}{Parameters}
+{\em path} & system path to the language text file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classResourceManager_a1ccb0e8b0d4bd728b9147360b021ea0d}\label{classResourceManager_a1ccb0e8b0d4bd728b9147360b021ea0d}} 
+\index{ResourceManager@{ResourceManager}!loadLevel@{loadLevel}}
+\index{loadLevel@{loadLevel}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{loadLevel()}{loadLevel()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::load\+Level (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Load level data from a file path. 
+
+Level data is stored in lines where numbers represent how many hits a brick can take. i.\+e. 0123210 represents a row of ascending and descending brick values surround by empty space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & system path to the level file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classResourceManager_a68bcbc72416c88744c07679b94324fc1}\label{classResourceManager_a68bcbc72416c88744c07679b94324fc1}} 
+\index{ResourceManager@{ResourceManager}!loadSound@{loadSound}}
+\index{loadSound@{loadSound}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{loadSound()}{loadSound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structClip}{Clip}} $\ast$ Resource\+Manager\+::load\+Sound (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Load a sound file from a path. 
+
+Stores the loaded sound clip to be referenced by the key string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & system path to sound file \\
+\hline
+{\em key} & lookup string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the loaded sound clip 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResourceManager_aaf6abbe90cefbfc90769c21764e0ebc8}\label{classResourceManager_aaf6abbe90cefbfc90769c21764e0ebc8}} 
+\index{ResourceManager@{ResourceManager}!menuFunction@{menuFunction}}
+\index{menuFunction@{menuFunction}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{menuFunction()}{menuFunction()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::menu\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function called when enter is pressed and a menu is open. 
+
+In this case it selects a language file to load. \mbox{\Hypertarget{classResourceManager_a8cb57f54e8e2084d5a193fb81991b967}\label{classResourceManager_a8cb57f54e8e2084d5a193fb81991b967}} 
+\index{ResourceManager@{ResourceManager}!menuIncrement@{menuIncrement}}
+\index{menuIncrement@{menuIncrement}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{menuIncrement()}{menuIncrement()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::menu\+Increment (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Increment a menu selection index by i. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & index offset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classResourceManager_a5c6b248bf94bba5e12aa36ea3331cfde}\label{classResourceManager_a5c6b248bf94bba5e12aa36ea3331cfde}} 
+\index{ResourceManager@{ResourceManager}!playSound@{playSound}}
+\index{playSound@{playSound}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::play\+Sound (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Queue the sound clip to play. 
+
+Key is a reference to the string used when load\+Sound is called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & lookup string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classResourceManager_ab8d9779f5f957610d272525cc32a775e}\label{classResourceManager_ab8d9779f5f957610d272525cc32a775e}} 
+\index{ResourceManager@{ResourceManager}!shutDown@{shutDown}}
+\index{shutDown@{shutDown}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{shutDown()}{shutDown()}}
+{\footnotesize\ttfamily int Resource\+Manager\+::shut\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dereference all pointers and clean up data. 
+
+\begin{DoxyReturn}{Returns}
+0 if the data is deleted, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResourceManager_a53bf358b029e050a285725bc70a8550a}\label{classResourceManager_a53bf358b029e050a285725bc70a8550a}} 
+\index{ResourceManager@{ResourceManager}!startUp@{startUp}}
+\index{startUp@{startUp}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{startUp()}{startUp()}}
+{\footnotesize\ttfamily int Resource\+Manager\+::start\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup default value. 
+
+\begin{DoxyReturn}{Returns}
+0 if the setup failed, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classResourceManager_abaee38983fe686be1b7f86b8a035f007}\label{classResourceManager_abaee38983fe686be1b7f86b8a035f007}} 
+\index{ResourceManager@{ResourceManager}!updateKey@{updateKey}}
+\index{updateKey@{updateKey}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{updateKey()}{updateKey()}}
+{\footnotesize\ttfamily void Resource\+Manager\+::update\+Key (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Keycode}]{key,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Update and store key state. 
+
+Used to store the current state of a key irrespective of key-\/events. 
+\begin{DoxyParams}{Parameters}
+{\em key} & keyboard keycode \\
+\hline
+{\em state} & true if the key is down, false otherwise \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classResourceManager_a4fe69eb88a03e7e4109ffa94458f192d}\label{classResourceManager_a4fe69eb88a03e7e4109ffa94458f192d}} 
+\index{ResourceManager@{ResourceManager}!ball@{ball}}
+\index{ball@{ball}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ball}{ball}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEntity}{Entity}}$\ast$ Resource\+Manager\+::ball}
+
+ball entity pointer \mbox{\Hypertarget{classResourceManager_a5f62df86dbf87569639ae22aea4a7241}\label{classResourceManager_a5f62df86dbf87569639ae22aea4a7241}} 
+\index{ResourceManager@{ResourceManager}!ballCaptured@{ballCaptured}}
+\index{ballCaptured@{ballCaptured}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ballCaptured}{ballCaptured}}
+{\footnotesize\ttfamily bool Resource\+Manager\+::ball\+Captured = true}
+
+is the ball captured on the paddle \mbox{\Hypertarget{classResourceManager_a5c8474f2abe4e2afc6f4d3e91380b213}\label{classResourceManager_a5c8474f2abe4e2afc6f4d3e91380b213}} 
+\index{ResourceManager@{ResourceManager}!end@{end}}
+\index{end@{end}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily bool Resource\+Manager\+::end = false}
+
+game over \mbox{\Hypertarget{classResourceManager_a378597dd84092629074efd1eacce2e7e}\label{classResourceManager_a378597dd84092629074efd1eacce2e7e}} 
+\index{ResourceManager@{ResourceManager}!entities@{entities}}
+\index{entities@{entities}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{entities}{entities}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structEntity}{Entity}} $\ast$$>$ Resource\+Manager\+::entities}
+
+entity display and physics list \mbox{\Hypertarget{classResourceManager_a906b0695beb33e27c47b6def82f8cf4a}\label{classResourceManager_a906b0695beb33e27c47b6def82f8cf4a}} 
+\index{ResourceManager@{ResourceManager}!levelId@{levelId}}
+\index{levelId@{levelId}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{levelId}{levelId}}
+{\footnotesize\ttfamily int Resource\+Manager\+::level\+Id = 0}
+
+current level id \mbox{\Hypertarget{classResourceManager_af899c18604ca2c0446a9ee2dccadd235}\label{classResourceManager_af899c18604ca2c0446a9ee2dccadd235}} 
+\index{ResourceManager@{ResourceManager}!menu@{menu}}
+\index{menu@{menu}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily bool Resource\+Manager\+::menu = false}
+
+is the game in a menu state \mbox{\Hypertarget{classResourceManager_afdba6262e0d0922a714e7d3b022127e7}\label{classResourceManager_afdba6262e0d0922a714e7d3b022127e7}} 
+\index{ResourceManager@{ResourceManager}!menuIndex@{menuIndex}}
+\index{menuIndex@{menuIndex}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{menuIndex}{menuIndex}}
+{\footnotesize\ttfamily int Resource\+Manager\+::menu\+Index = 0}
+
+menu selection index \mbox{\Hypertarget{classResourceManager_aa5ab59252e666b995787a8e6eddc4e98}\label{classResourceManager_aa5ab59252e666b995787a8e6eddc4e98}} 
+\index{ResourceManager@{ResourceManager}!menuOptions@{menuOptions}}
+\index{menuOptions@{menuOptions}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{menuOptions}{menuOptions}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Resource\+Manager\+::menu\+Options}
+
+language menu option lists \mbox{\Hypertarget{classResourceManager_a73b464aa18681dffe4f47e43759e4e06}\label{classResourceManager_a73b464aa18681dffe4f47e43759e4e06}} 
+\index{ResourceManager@{ResourceManager}!PAUSE\_DELAY@{PAUSE\_DELAY}}
+\index{PAUSE\_DELAY@{PAUSE\_DELAY}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{PAUSE\_DELAY}{PAUSE\_DELAY}}
+{\footnotesize\ttfamily float Resource\+Manager\+::\+P\+A\+U\+S\+E\+\_\+\+D\+E\+L\+AY = 3}
+
+default pause delay \mbox{\Hypertarget{classResourceManager_a72ba3fbb53ac6573c893626e32db3f5f}\label{classResourceManager_a72ba3fbb53ac6573c893626e32db3f5f}} 
+\index{ResourceManager@{ResourceManager}!pauseText@{pauseText}}
+\index{pauseText@{pauseText}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{pauseText}{pauseText}}
+{\footnotesize\ttfamily std\+::string Resource\+Manager\+::pause\+Text = \char`\"{}\char`\"{}}
+
+pause text string \mbox{\Hypertarget{classResourceManager_a6dabaa9f71a779a46eeefb94518a6c3b}\label{classResourceManager_a6dabaa9f71a779a46eeefb94518a6c3b}} 
+\index{ResourceManager@{ResourceManager}!pauseTimer@{pauseTimer}}
+\index{pauseTimer@{pauseTimer}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{pauseTimer}{pauseTimer}}
+{\footnotesize\ttfamily float Resource\+Manager\+::pause\+Timer = 0}
+
+pause timer \mbox{\Hypertarget{classResourceManager_a4c935d5250083612ec752f61c9271e1c}\label{classResourceManager_a4c935d5250083612ec752f61c9271e1c}} 
+\index{ResourceManager@{ResourceManager}!player@{player}}
+\index{player@{player}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEntity}{Entity}}$\ast$ Resource\+Manager\+::player}
+
+player entity pointer \mbox{\Hypertarget{classResourceManager_a47cffc1a8885659ac13d03d17f117bcd}\label{classResourceManager_a47cffc1a8885659ac13d03d17f117bcd}} 
+\index{ResourceManager@{ResourceManager}!playerLives@{playerLives}}
+\index{playerLives@{playerLives}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{playerLives}{playerLives}}
+{\footnotesize\ttfamily int Resource\+Manager\+::player\+Lives = 3}
+
+number of player lives \mbox{\Hypertarget{classResourceManager_a2c40c87216d2934fe950ff7ae20881ac}\label{classResourceManager_a2c40c87216d2934fe950ff7ae20881ac}} 
+\index{ResourceManager@{ResourceManager}!score@{score}}
+\index{score@{score}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int Resource\+Manager\+::score = 0}
+
+current score \mbox{\Hypertarget{classResourceManager_ac9182df36b2b63b8647521a2d9d0e89c}\label{classResourceManager_ac9182df36b2b63b8647521a2d9d0e89c}} 
+\index{ResourceManager@{ResourceManager}!shootVector@{shootVector}}
+\index{shootVector@{shootVector}!ResourceManager@{ResourceManager}}
+\doxysubsubsection{\texorpdfstring{shootVector}{shootVector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector3D}{Vector3D}} Resource\+Manager\+::shoot\+Vector = \mbox{\hyperlink{structVector3D}{Vector3D}}(0, 2, 0)}
+
+initial velocity when shooting the ball from the paddle 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Resource\+Manager.\+h\item 
+src/Resource\+Manager.\+cpp\end{DoxyCompactItemize}

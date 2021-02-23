@@ -1,0 +1,116 @@
+\hypertarget{structClip}{}\doxysection{Clip Struct Reference}
+\label{structClip}\index{Clip@{Clip}}
+
+
+Struct to hold music data.  
+
+
+
+
+{\ttfamily \#include $<$Clip.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structClip_a877a8fcb8b0cde0341e23a7397122e13}{callback}} (void $\ast$userdata, Uint8 $\ast$stream, int len)
+\begin{DoxyCompactList}\small\item\em Callback passed into the S\+DL Audio library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{structClip_af264c416396be085bde80abaa98321d7}{clip\+Len}}
+\item 
+Uint32 \mbox{\hyperlink{structClip_a405a37cacd24005fd4caa027f0d1b633}{track\+Pos}} = 0
+\item 
+Uint8 $\ast$ \mbox{\hyperlink{structClip_a0a8a3d443b76effe676e3aea3ca917ac}{data}}
+\item 
+S\+D\+L\+\_\+\+Audio\+Spec \mbox{\hyperlink{structClip_a670b1edb8881123255b491fecc0babb3}{spec}}
+\item 
+bool \mbox{\hyperlink{structClip_af0daba9ba1764891cb51b941f6dae2c9}{loop}} = false
+\item 
+bool \mbox{\hyperlink{structClip_a60fedb36710df0ecabc21067f3592191}{active}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{structClip}{Clip}} $\ast$ $>$ \mbox{\hyperlink{structClip_accfed997aca802197797304ac63f3b38}{sounds}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct to hold music data. 
+
+Includes looping and tracking of music position. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structClip_a877a8fcb8b0cde0341e23a7397122e13}\label{structClip_a877a8fcb8b0cde0341e23a7397122e13}} 
+\index{Clip@{Clip}!callback@{callback}}
+\index{callback@{callback}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily static void Clip\+::callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{userdata,  }\item[{Uint8 $\ast$}]{stream,  }\item[{int}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Callback passed into the S\+DL Audio library. 
+
+Loops through all loaded sounds and mixes them together if they are active.
+
+
+\begin{DoxyParams}{Parameters}
+{\em userdata} & not used \\
+\hline
+{\em stream} & audio buffer \\
+\hline
+{\em len} & length of the buffer \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structClip_a60fedb36710df0ecabc21067f3592191}\label{structClip_a60fedb36710df0ecabc21067f3592191}} 
+\index{Clip@{Clip}!active@{active}}
+\index{active@{active}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool Clip\+::active = false}
+
+is the clip playing or not \mbox{\Hypertarget{structClip_af264c416396be085bde80abaa98321d7}\label{structClip_af264c416396be085bde80abaa98321d7}} 
+\index{Clip@{Clip}!clipLen@{clipLen}}
+\index{clipLen@{clipLen}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{clipLen}{clipLen}}
+{\footnotesize\ttfamily Uint32 Clip\+::clip\+Len}
+
+clip length \mbox{\Hypertarget{structClip_a0a8a3d443b76effe676e3aea3ca917ac}\label{structClip_a0a8a3d443b76effe676e3aea3ca917ac}} 
+\index{Clip@{Clip}!data@{data}}
+\index{data@{data}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily Uint8$\ast$ Clip\+::data}
+
+audio data \mbox{\Hypertarget{structClip_af0daba9ba1764891cb51b941f6dae2c9}\label{structClip_af0daba9ba1764891cb51b941f6dae2c9}} 
+\index{Clip@{Clip}!loop@{loop}}
+\index{loop@{loop}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily bool Clip\+::loop = false}
+
+flag to set the clip looping \mbox{\Hypertarget{structClip_accfed997aca802197797304ac63f3b38}\label{structClip_accfed997aca802197797304ac63f3b38}} 
+\index{Clip@{Clip}!sounds@{sounds}}
+\index{sounds@{sounds}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{sounds}{sounds}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structClip}{Clip}} $\ast$ $>$ Clip\+::sounds\hspace{0.3cm}{\ttfamily [static]}}
+
+static list of all sounds \mbox{\Hypertarget{structClip_a670b1edb8881123255b491fecc0babb3}\label{structClip_a670b1edb8881123255b491fecc0babb3}} 
+\index{Clip@{Clip}!spec@{spec}}
+\index{spec@{spec}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{spec}{spec}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Audio\+Spec Clip\+::spec}
+
+audio specs \mbox{\Hypertarget{structClip_a405a37cacd24005fd4caa027f0d1b633}\label{structClip_a405a37cacd24005fd4caa027f0d1b633}} 
+\index{Clip@{Clip}!trackPos@{trackPos}}
+\index{trackPos@{trackPos}!Clip@{Clip}}
+\doxysubsubsection{\texorpdfstring{trackPos}{trackPos}}
+{\footnotesize\ttfamily Uint32 Clip\+::track\+Pos = 0}
+
+track position 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Clip.\+h\item 
+src/Clip.\+cpp\end{DoxyCompactItemize}

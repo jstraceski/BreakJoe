@@ -1,0 +1,6 @@
+score
+vies
+Vous Gagnez!
+Tu as Perdu!
+Niveau Suivant
+niveau

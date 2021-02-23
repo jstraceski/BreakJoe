@@ -1,0 +1,132 @@
+\hypertarget{structEntity}{}\doxysection{Entity Struct Reference}
+\label{structEntity}\index{Entity@{Entity}}
+
+
+Structure to store entity data.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+
+
+Collaboration diagram for Entity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{structEntity__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVector3D}{Vector3D}} \mbox{\hyperlink{structEntity_a256ae19b96063c620d7e27ec30df31be}{pos}}
+\item 
+\mbox{\hyperlink{structVector3D}{Vector3D}} \mbox{\hyperlink{structEntity_a876cc7b1a40f33c6c4b79bec85d3d469}{f\+\_\+pos}}
+\item 
+\mbox{\hyperlink{structVector3D}{Vector3D}} \mbox{\hyperlink{structEntity_ab70706f36a88953ee95050505c1eccfd}{vel}}
+\item 
+int \mbox{\hyperlink{structEntity_af04dc2ff0e45d7525a07b84d1b1e6027}{shape\+Id}} = 0
+\item 
+int \mbox{\hyperlink{structEntity_a633ba15454c86ef222a18977fbd2e73b}{type\+Id}} = 0
+\item 
+int \mbox{\hyperlink{structEntity_aa6dbb48ccb8a7c46f02e4df97d4f8732}{hits}} = 1
+\item 
+float \mbox{\hyperlink{structEntity_ae6941e2890babbae875154757880e12d}{radius}} = 0
+\item 
+float \mbox{\hyperlink{structEntity_adadfcc784f30b51b8e49f8230a56b793}{width}} = 0
+\item 
+float \mbox{\hyperlink{structEntity_a4550dc1011f47f6c4bb86e564e7d605b}{height}} = 0
+\item 
+float \mbox{\hyperlink{structEntity_adbf3b9acdb7564d712af8b6179f89764}{drag}} = 0.\+95
+\item 
+bool \mbox{\hyperlink{structEntity_a5594463cf552595d3d6c7066596e7bcc}{reflects}} = false
+\item 
+bool \mbox{\hyperlink{structEntity_a939da33e8b67b1d2ee227930aa72da3b}{active}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to store entity data. 
+
+Stores shape width/height and radius data. Includes shape id and entity id data, as well as active state. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structEntity_a939da33e8b67b1d2ee227930aa72da3b}\label{structEntity_a939da33e8b67b1d2ee227930aa72da3b}} 
+\index{Entity@{Entity}!active@{active}}
+\index{active@{active}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool Entity\+::active = true}
+
+active state \mbox{\Hypertarget{structEntity_adbf3b9acdb7564d712af8b6179f89764}\label{structEntity_adbf3b9acdb7564d712af8b6179f89764}} 
+\index{Entity@{Entity}!drag@{drag}}
+\index{drag@{drag}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{drag}{drag}}
+{\footnotesize\ttfamily float Entity\+::drag = 0.\+95}
+
+air drag \mbox{\Hypertarget{structEntity_a876cc7b1a40f33c6c4b79bec85d3d469}\label{structEntity_a876cc7b1a40f33c6c4b79bec85d3d469}} 
+\index{Entity@{Entity}!f\_pos@{f\_pos}}
+\index{f\_pos@{f\_pos}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{f\_pos}{f\_pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector3D}{Vector3D}} Entity\+::f\+\_\+pos}
+
+future position \mbox{\Hypertarget{structEntity_a4550dc1011f47f6c4bb86e564e7d605b}\label{structEntity_a4550dc1011f47f6c4bb86e564e7d605b}} 
+\index{Entity@{Entity}!height@{height}}
+\index{height@{height}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily float Entity\+::height = 0}
+
+If the entity is a rectangle then this defines the height, otherwise 0 \mbox{\Hypertarget{structEntity_aa6dbb48ccb8a7c46f02e4df97d4f8732}\label{structEntity_aa6dbb48ccb8a7c46f02e4df97d4f8732}} 
+\index{Entity@{Entity}!hits@{hits}}
+\index{hits@{hits}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{hits}{hits}}
+{\footnotesize\ttfamily int Entity\+::hits = 1}
+
+counter for bricks, number of hits left \mbox{\Hypertarget{structEntity_a256ae19b96063c620d7e27ec30df31be}\label{structEntity_a256ae19b96063c620d7e27ec30df31be}} 
+\index{Entity@{Entity}!pos@{pos}}
+\index{pos@{pos}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector3D}{Vector3D}} Entity\+::pos}
+
+position \mbox{\Hypertarget{structEntity_ae6941e2890babbae875154757880e12d}\label{structEntity_ae6941e2890babbae875154757880e12d}} 
+\index{Entity@{Entity}!radius@{radius}}
+\index{radius@{radius}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily float Entity\+::radius = 0}
+
+If the entity is a circle then this defines the radius, otherwise 0 \mbox{\Hypertarget{structEntity_a5594463cf552595d3d6c7066596e7bcc}\label{structEntity_a5594463cf552595d3d6c7066596e7bcc}} 
+\index{Entity@{Entity}!reflects@{reflects}}
+\index{reflects@{reflects}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{reflects}{reflects}}
+{\footnotesize\ttfamily bool Entity\+::reflects = false}
+
+does the object bounce when it collides \mbox{\Hypertarget{structEntity_af04dc2ff0e45d7525a07b84d1b1e6027}\label{structEntity_af04dc2ff0e45d7525a07b84d1b1e6027}} 
+\index{Entity@{Entity}!shapeId@{shapeId}}
+\index{shapeId@{shapeId}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{shapeId}{shapeId}}
+{\footnotesize\ttfamily int Entity\+::shape\+Id = 0}
+
+0 rect / 1 circle \mbox{\Hypertarget{structEntity_a633ba15454c86ef222a18977fbd2e73b}\label{structEntity_a633ba15454c86ef222a18977fbd2e73b}} 
+\index{Entity@{Entity}!typeId@{typeId}}
+\index{typeId@{typeId}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{typeId}{typeId}}
+{\footnotesize\ttfamily int Entity\+::type\+Id = 0}
+
+0 paddle / 1 brick / 2 ball \mbox{\Hypertarget{structEntity_ab70706f36a88953ee95050505c1eccfd}\label{structEntity_ab70706f36a88953ee95050505c1eccfd}} 
+\index{Entity@{Entity}!vel@{vel}}
+\index{vel@{vel}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{vel}{vel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector3D}{Vector3D}} Entity\+::vel}
+
+velocity \mbox{\Hypertarget{structEntity_adadfcc784f30b51b8e49f8230a56b793}\label{structEntity_adadfcc784f30b51b8e49f8230a56b793}} 
+\index{Entity@{Entity}!width@{width}}
+\index{width@{width}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily float Entity\+::width = 0}
+
+If the entity is a rectangle then this defines the width, otherwise 0 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Entity.\+h\end{DoxyCompactItemize}

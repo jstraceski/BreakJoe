@@ -1,0 +1,4 @@
+<map id="Entity" name="Entity">
+<area shape="rect" id="node1" title="Structure to store entity data." alt="" coords="16,124,76,151"/>
+<area shape="rect" id="node2" href="$structVector3D.html" title="mathematical 3D vector structure Vector3D performs vector operations with 3&#45;dimensions The purpose of..." alt="" coords="5,5,87,32"/>
+</map>

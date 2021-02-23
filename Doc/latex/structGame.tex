@@ -1,0 +1,109 @@
+\hypertarget{structGame}{}\doxysection{Game Struct Reference}
+\label{structGame}\index{Game@{Game}}
+
+
+Window and \mbox{\hyperlink{structGame}{Game}} Container.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structGame_a8ff3a6838bad4ea9493c103f96d7bff3}{init}} ()
+\item 
+void \mbox{\hyperlink{structGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{structGame_aee8c67504531a46c5c8838ee927b2024}{S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}} = 1080
+\item 
+static int \mbox{\hyperlink{structGame_ac43cd674712349268e38958663de450c}{S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}} = 720
+\item 
+static int \mbox{\hyperlink{structGame_a26c16019f692c115a1baeb9dbfcf79aa}{B\+R\+I\+C\+K\+\_\+\+T\+O\+P\+\_\+\+O\+F\+F\+S\+ET}} = 80
+\item 
+static int \mbox{\hyperlink{structGame_a04cf019a7409fdfcfee2dc7ca15caf3a}{B\+R\+I\+C\+K\+\_\+\+H\+E\+I\+G\+HT}} = 20
+\item 
+static int \mbox{\hyperlink{structGame_a56d173b78975fd1d3efff41ac3a617a9}{B\+R\+I\+C\+K\+\_\+\+S\+P\+A\+C\+I\+NG}} = 5
+\item 
+static float \mbox{\hyperlink{structGame_a5d4294657ec727af503376927e0ca41d}{P\+A\+D\+D\+L\+E\+\_\+\+S\+P\+E\+ED}} = 0.\+8f
+\item 
+static float \mbox{\hyperlink{structGame_a0190727fb8da7e6e84d218c0e82f8541}{M\+A\+X\+\_\+\+S\+P\+E\+ED}} = 10.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Window and \mbox{\hyperlink{structGame}{Game}} Container. 
+
+Initializes Open\+G\+L/\+Dev\+I\+L/\+Freetype library data and controls most game logic. Gathers key input, parses game states, updates resulting states, and renders the result ot the screen. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structGame_a8ff3a6838bad4ea9493c103f96d7bff3}\label{structGame_a8ff3a6838bad4ea9493c103f96d7bff3}} 
+\index{Game@{Game}!init@{init}}
+\index{init@{init}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Game\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize and load all data. \begin{DoxyReturn}{Returns}
+false if the init fails, true otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structGame_a1ab78f5ed0d5ea879157357cf2fb2afa}\label{structGame_a1ab78f5ed0d5ea879157357cf2fb2afa}} 
+\index{Game@{Game}!run@{run}}
+\index{run@{run}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start the game loop. Main entrance to the game, obtains key inputs, parses states, and renders the changes. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structGame_a04cf019a7409fdfcfee2dc7ca15caf3a}\label{structGame_a04cf019a7409fdfcfee2dc7ca15caf3a}} 
+\index{Game@{Game}!BRICK\_HEIGHT@{BRICK\_HEIGHT}}
+\index{BRICK\_HEIGHT@{BRICK\_HEIGHT}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{BRICK\_HEIGHT}{BRICK\_HEIGHT}}
+{\footnotesize\ttfamily int Game\+::\+B\+R\+I\+C\+K\+\_\+\+H\+E\+I\+G\+HT = 20\hspace{0.3cm}{\ttfamily [static]}}
+
+height of the brick on the screen \mbox{\Hypertarget{structGame_a56d173b78975fd1d3efff41ac3a617a9}\label{structGame_a56d173b78975fd1d3efff41ac3a617a9}} 
+\index{Game@{Game}!BRICK\_SPACING@{BRICK\_SPACING}}
+\index{BRICK\_SPACING@{BRICK\_SPACING}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{BRICK\_SPACING}{BRICK\_SPACING}}
+{\footnotesize\ttfamily int Game\+::\+B\+R\+I\+C\+K\+\_\+\+S\+P\+A\+C\+I\+NG = 5\hspace{0.3cm}{\ttfamily [static]}}
+
+space between bricks \mbox{\Hypertarget{structGame_a26c16019f692c115a1baeb9dbfcf79aa}\label{structGame_a26c16019f692c115a1baeb9dbfcf79aa}} 
+\index{Game@{Game}!BRICK\_TOP\_OFFSET@{BRICK\_TOP\_OFFSET}}
+\index{BRICK\_TOP\_OFFSET@{BRICK\_TOP\_OFFSET}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{BRICK\_TOP\_OFFSET}{BRICK\_TOP\_OFFSET}}
+{\footnotesize\ttfamily int Game\+::\+B\+R\+I\+C\+K\+\_\+\+T\+O\+P\+\_\+\+O\+F\+F\+S\+ET = 80\hspace{0.3cm}{\ttfamily [static]}}
+
+offset between the top of the bricks and the top of the screen. \mbox{\Hypertarget{structGame_a0190727fb8da7e6e84d218c0e82f8541}\label{structGame_a0190727fb8da7e6e84d218c0e82f8541}} 
+\index{Game@{Game}!MAX\_SPEED@{MAX\_SPEED}}
+\index{MAX\_SPEED@{MAX\_SPEED}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{MAX\_SPEED}{MAX\_SPEED}}
+{\footnotesize\ttfamily float Game\+::\+M\+A\+X\+\_\+\+S\+P\+E\+ED = 10.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+ball and paddle max speed \mbox{\Hypertarget{structGame_a5d4294657ec727af503376927e0ca41d}\label{structGame_a5d4294657ec727af503376927e0ca41d}} 
+\index{Game@{Game}!PADDLE\_SPEED@{PADDLE\_SPEED}}
+\index{PADDLE\_SPEED@{PADDLE\_SPEED}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{PADDLE\_SPEED}{PADDLE\_SPEED}}
+{\footnotesize\ttfamily float Game\+::\+P\+A\+D\+D\+L\+E\+\_\+\+S\+P\+E\+ED = 0.\+8f\hspace{0.3cm}{\ttfamily [static]}}
+
+paddle speed added to the velocity of the paddle every tick \mbox{\Hypertarget{structGame_ac43cd674712349268e38958663de450c}\label{structGame_ac43cd674712349268e38958663de450c}} 
+\index{Game@{Game}!SCREEN\_HEIGHT@{SCREEN\_HEIGHT}}
+\index{SCREEN\_HEIGHT@{SCREEN\_HEIGHT}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_HEIGHT}{SCREEN\_HEIGHT}}
+{\footnotesize\ttfamily int Game\+::\+S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT = 720\hspace{0.3cm}{\ttfamily [static]}}
+
+Screen Height \mbox{\Hypertarget{structGame_aee8c67504531a46c5c8838ee927b2024}\label{structGame_aee8c67504531a46c5c8838ee927b2024}} 
+\index{Game@{Game}!SCREEN\_WIDTH@{SCREEN\_WIDTH}}
+\index{SCREEN\_WIDTH@{SCREEN\_WIDTH}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_WIDTH}{SCREEN\_WIDTH}}
+{\footnotesize\ttfamily int Game\+::\+S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH = 1080\hspace{0.3cm}{\ttfamily [static]}}
+
+Screen Width 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Game.\+h\item 
+src/Game.\+cpp\end{DoxyCompactItemize}

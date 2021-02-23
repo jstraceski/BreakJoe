@@ -1,0 +1,93 @@
+\hypertarget{classLTimer}{}\doxysection{L\+Timer Class Reference}
+\label{classLTimer}\index{LTimer@{LTimer}}
+
+
+Lazy-\/foo Timer wrapper.  
+
+
+
+
+{\ttfamily \#include $<$L\+Timer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLTimer_a7dc11f05cf5098a6d06ebd6ebec96ed6}{start}} ()
+\item 
+void \mbox{\hyperlink{classLTimer_aeabbf5f935907fcfeaa7f4403741e4ae}{stop}} ()
+\item 
+void \mbox{\hyperlink{classLTimer_a8a6c6af5435bdaa825a30f84877dc059}{pause}} ()
+\item 
+void \mbox{\hyperlink{classLTimer_a67a946bffb25cf5eb8ab430ffb5f7cec}{unpause}} ()
+\item 
+Uint32 \mbox{\hyperlink{classLTimer_a57c4bdca0f7bdd75c65b6ab1499de1e7}{get\+Ticks}} ()
+\item 
+bool \mbox{\hyperlink{classLTimer_a102ca688eaa4109dd733b4b60a29d27c}{is\+Started}} ()
+\item 
+bool \mbox{\hyperlink{classLTimer_ae1d9b504da6ed0f42e10f2338a9f88bb}{is\+Paused}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lazy-\/foo Timer wrapper. 
+
+Stores time data and makes managing time easier. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLTimer_a57c4bdca0f7bdd75c65b6ab1499de1e7}\label{classLTimer_a57c4bdca0f7bdd75c65b6ab1499de1e7}} 
+\index{LTimer@{LTimer}!getTicks@{getTicks}}
+\index{getTicks@{getTicks}!LTimer@{LTimer}}
+\doxysubsubsection{\texorpdfstring{getTicks()}{getTicks()}}
+{\footnotesize\ttfamily Uint32 L\+Timer\+::get\+Ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the total time in ticks since the timer was started. \begin{DoxyReturn}{Returns}
+time in milliseconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLTimer_ae1d9b504da6ed0f42e10f2338a9f88bb}\label{classLTimer_ae1d9b504da6ed0f42e10f2338a9f88bb}} 
+\index{LTimer@{LTimer}!isPaused@{isPaused}}
+\index{isPaused@{isPaused}!LTimer@{LTimer}}
+\doxysubsubsection{\texorpdfstring{isPaused()}{isPaused()}}
+{\footnotesize\ttfamily bool L\+Timer\+::is\+Paused (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Has the timer been paused. \begin{DoxyReturn}{Returns}
+true if it has, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLTimer_a102ca688eaa4109dd733b4b60a29d27c}\label{classLTimer_a102ca688eaa4109dd733b4b60a29d27c}} 
+\index{LTimer@{LTimer}!isStarted@{isStarted}}
+\index{isStarted@{isStarted}!LTimer@{LTimer}}
+\doxysubsubsection{\texorpdfstring{isStarted()}{isStarted()}}
+{\footnotesize\ttfamily bool L\+Timer\+::is\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Has the timer been started. \begin{DoxyReturn}{Returns}
+true if it has, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLTimer_a8a6c6af5435bdaa825a30f84877dc059}\label{classLTimer_a8a6c6af5435bdaa825a30f84877dc059}} 
+\index{LTimer@{LTimer}!pause@{pause}}
+\index{pause@{pause}!LTimer@{LTimer}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void L\+Timer\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Pause the timer. \mbox{\Hypertarget{classLTimer_a7dc11f05cf5098a6d06ebd6ebec96ed6}\label{classLTimer_a7dc11f05cf5098a6d06ebd6ebec96ed6}} 
+\index{LTimer@{LTimer}!start@{start}}
+\index{start@{start}!LTimer@{LTimer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void L\+Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start the timer. \mbox{\Hypertarget{classLTimer_aeabbf5f935907fcfeaa7f4403741e4ae}\label{classLTimer_aeabbf5f935907fcfeaa7f4403741e4ae}} 
+\index{LTimer@{LTimer}!stop@{stop}}
+\index{stop@{stop}!LTimer@{LTimer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void L\+Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop the timer. \mbox{\Hypertarget{classLTimer_a67a946bffb25cf5eb8ab430ffb5f7cec}\label{classLTimer_a67a946bffb25cf5eb8ab430ffb5f7cec}} 
+\index{LTimer@{LTimer}!unpause@{unpause}}
+\index{unpause@{unpause}!LTimer@{LTimer}}
+\doxysubsubsection{\texorpdfstring{unpause()}{unpause()}}
+{\footnotesize\ttfamily void L\+Timer\+::unpause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resume the timer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/L\+Timer.\+h\item 
+src/L\+Timer.\+cpp\end{DoxyCompactItemize}
