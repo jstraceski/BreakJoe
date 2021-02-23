@@ -38,7 +38,7 @@ There shouldn't be any issues but see the first bullet point in case of any snag
 
 ## Project Hieararchy
 
-### ./Game Directory Organization
+### Directory Organization
 
 - Docs 
     - Source Code Documentation
